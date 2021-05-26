@@ -1,0 +1,65 @@
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 12s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(https://pbs.twimg.com/media/DMWLg3HVQAAi4V6.jpg);
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(http://www.ukm.my/kesatria/wp-content/uploads/2018/08/bsmmm.jpg);
+    animation-delay: 4s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(http://www.ukm.my/kesatria/wp-content/uploads/2019/08/img_4147_2.jpg);
+    animation-delay: 8s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
